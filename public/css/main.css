@@ -1,3 +1,42 @@
+/*##########        ############
+###########  NavBar  ###########
+############        ##########*/
+
+.navbar {
+	width: 100%;
+	background-color: #303030;
+	position: fixed;
+	top: 0;
+	z-index: 999;
+}
+
+.navbar .navbar-brand .navbar-logo {
+	height: 40px;
+}
+
+.navbar .navbar-collapse {
+	justify-content: flex-end;
+	padding-right: 150px;
+}
+
+/*##########        ############
+###########  Footer  ###########
+############        ##########*/
+
+.page-footer {
+	width: 100%;
+	background-color: #303030;
+	color: #fff;
+}
+
+@media (max-width: 768px) {
+
+	.navbar {
+		display: none;
+	}
+
+}
+
 /*########            ##########
 #########  Forms Sign  #########
 ##########            ########*/
@@ -28,4 +67,59 @@
 	border: 1px solid #f5c6cb;
 	border-radius: .25rem;
 	padding: .75rem 1.25rem;
+}
+
+/*##########        ############
+###########  Header  ###########
+############        ##########*/
+
+.header {
+	position: relative;
+	height:100vh;
+	background: url('../img/header_bg.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+.header .down-arrow .arrow{
+	cursor: pointer;
+	position: absolute;
+	bottom: 20px;
+	right: 15px;
+	width: 50px;
+}
+
+/*###########      #############
+############  Home  ############
+#############      ###########*/
+
+.tricks article {
+	padding: 0;
+	border: 1px solid lightgray;
+}
+
+.tricks article a {
+	color: #000;
+}
+
+.tricks article a:hover {
+	color: #505050;
+	text-decoration: none;
+}
+
+.tricks article .trick-img {
+	width: 100%;
+	height: 200px;
+}
+
+.tricks article .tricks-infos {
+	padding: 8px;
+}
+
+.tricks article .tricks-infos .trick-name {
+	font-size: 1.1rem;
+	font-weight: 500
+}
+
+.tricks article .tricks-infos i {
+	margin: 0 3px;
 }

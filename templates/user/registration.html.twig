@@ -1,6 +1,9 @@
 {% block title %}SnowTricks - Registration{% endblock %}
 {% extends "base.html.twig" %}
 {% block body %}
+
+	{% include 'navbar.html.twig' %}
+
 	<div class="form-sign col-12 col-sm-8 col-md-6 col-lg-5 col-xl-3 mx-auto ">
 		<h1 class="text-center">Registration</h1>
 		
@@ -17,4 +20,7 @@
 		    <button type="submit" class="btn btn-primary col-6 d-block mx-auto">Create an account</button>
 		{{ form_end(registrationForm) }}
 	</div>
+
+	{% include 'footer.html.twig' %}
+
 {% endblock %}

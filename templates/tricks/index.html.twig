@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}SnowTricks{% endblock %}
+
+{% block body %}
+
+	{% include 'navbar.html.twig' %}
+
+	<header class="header">
+		<div class="down-arrow">
+			<img src="{{ asset('img/arrow.png') }}" alt="down-arrow" class="arrow">
+		</div>
+	</header>
+	
+	<section class="tricks justify-content-around mx-auto py-4 row col-12 col-lg-10">
+		<article class="col-10 col-sm-8 col-md-4 col-lg-2 text-center mx-2 my-4">
+			<a href="#">
+				<img src="{{ asset('img/upload/5d1650c1acfc7.png') }}" alt="" class="trick-img">
+				<div class="tricks-infos d-flex justify-content-around">
+					<span class="trick-name">Nom de la figure</span>
+					<div>
+						<a href="#"><i class="fas fa-pencil-alt fa-lg"></i></a>
+						<i class="fas fa-trash-alt fa-lg"></i>
+					</div>
+				</div>
+			</a>
+		</article>
+		<div class="col-12">
+			<button type="submit" class="btn btn-primary btn-more-tricks col-10 col-sm-8 col-md-4 col-lg-2 d-block mx-auto"><i class="far fa-spinner"></i> Load more</button>
+		</div>
+	</section>
+
+	{% include 'footer.html.twig' %}
+
+{% endblock %}

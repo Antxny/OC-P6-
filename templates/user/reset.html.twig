@@ -4,6 +4,8 @@
 
 {% block body %}
 
+	{% include 'navbar.html.twig' %}
+
 	<div class="form-sign col-12 col-sm-8 col-md-6 col-lg-5 col-xl-3 mx-auto ">
 		<h1 class="text-center">Reset Password</h1>
 
@@ -16,5 +18,7 @@
 	    </form>
 
 	</div>
+
+	{% include 'footer.html.twig' %}
 
 {% endblock %}
