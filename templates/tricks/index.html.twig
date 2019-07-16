@@ -13,6 +13,13 @@
 	</header>
 	
 	<section class="tricks justify-content-around mx-auto py-4 row col-12 col-lg-10">
+
+	        {% for message in app.flashes('success') %}
+		        <div class="alert alert-success col-12">
+		            {{ message }}
+		        </div>
+	    	{% endfor %}
+
 		<article class="col-10 col-sm-8 col-md-4 col-lg-2 text-center mx-2 my-4">
 			<a href="#">
 				<img src="{{ asset('img/upload/5d1650c1acfc7.png') }}" alt="" class="trick-img">

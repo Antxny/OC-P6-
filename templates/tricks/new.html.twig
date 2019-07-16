@@ -17,10 +17,12 @@
 			<div class="gallery"></div>
 			{{ form_row(tricksNewForm.name, {'attr': {'class': 'form-control'}}) }}
 			{{ form_row(tricksNewForm.description, {'attr': {'class': 'form-control'}}) }}
-			{{ form_row(tricksNewForm.trick_group, {'attr': {'class': 'form-control'}}) }}
+			{{ form_row(tricksNewForm.tricksGroup, {'attr': {'class': 'form-control'}}) }}
 			<button type="submit" class="btn btn-primary col-6 d-block mx-auto my-3">Add the trick</button>
 		{{ form_end(tricksNewForm) }}
 	</div>
+
+	
 	
 	{% include 'footer.html.twig' %}
 
