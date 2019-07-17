@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}SnowTricks - TricksName{% endblock %}
+	
+{% block body %}
+	{% for image in images[0].images %}
+		<img src="{{ asset('img/upload/' ~ image ) }}" alt="">
+	{% endfor %}
+	<h1>{{ tricks.name}}</h1>
+		<p>{{ tricks.description }}</p>
+		<span>Group : {{ tricks.tricksGroup.name }}</span>
+
+{% endblock %}

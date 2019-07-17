@@ -31,4 +31,5 @@ $(document).ready(function() {
         $('.gallery').empty();
         imagesPreview(this, 'div.gallery');
     });
+
 });

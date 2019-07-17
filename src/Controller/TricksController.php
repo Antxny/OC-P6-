@@ -18,12 +18,27 @@ class TricksController extends AbstractController
 {
 
     /**
+    * @var TricksRepository
+    */
+    private $repository;
+
+    public function __construct(TricksRepository $repository)
+    {
+        $this->repository = $repository;
+    }
+
+    /**
     * @Route("/", name="tricks_index")
+    * @param TricksRepository $tricks
     */
 	public function index()
 	{
 
-		return $this->render('tricks/index.html.twig');
+        $tricks = $this->repository->findAllTricks();
+        
+        return $this->render('tricks/index.html.twig', [
+            'tricks' => $tricks
+        ]);
 
 	}
 
@@ -79,6 +94,44 @@ class TricksController extends AbstractController
         	]);
 
         }
+
+    }
+
+    /**
+    * @Route("/tricks/details/{id}-{slug}", name="trick_view", requirements={"slug": "[a-z0-9\-]*"})
+    */
+    public function viewTricks(Request $request, $slug, $id)
+    {
+
+        $tricks = $this->repository->find($id);
+        $images = $this->repository->findImages($id);
+
+        return $this->render('tricks/view.html.twig', [
+            'tricks' => $tricks,
+            'images' => $images,
+        ]);
+
+    }
+
+
+
+    /**
+    * @Route("/t/edit", name="trick_edit")
+    */
+    public function edit()
+    {
+
+        
+
+    }
+
+    /**
+    * @Route("/t/delete", name="trick_delete")
+    */
+    public function deleteTricks()
+    {
+
+        
 
     }
 
